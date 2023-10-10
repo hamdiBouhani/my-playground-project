@@ -9,6 +9,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/hamdiBouhani/my-playground-project/config"
 	docs "github.com/hamdiBouhani/my-playground-project/docs" //Swagger definition
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -30,12 +31,16 @@ type HttpService struct {
 	port       string
 	corsConfig cors.Config
 
+	logging *config.LoggerClient
+
 	devMode  bool
 	testMode bool
 }
 
-func NewHttpService() *HttpService {
-	svc := HttpService{}
+func NewHttpService(logging *config.LoggerClient) *HttpService {
+	svc := HttpService{
+		logging: logging,
+	}
 	return &svc
 }
 
