@@ -1,0 +1,14 @@
+mode: set
+github.com/hamdiBouhani/my-playground-project/server/http.go:37.36,40.2 2 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:43.39,61.17 7 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:61.17,63.3 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:65.2,66.16 2 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:66.16,68.3 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:69.2,69.19 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:69.19,71.3 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:72.2,72.12 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:75.48,76.18 1 1
+github.com/hamdiBouhani/my-playground-project/server/http.go:76.18,78.3 1 0
+github.com/hamdiBouhani/my-playground-project/server/http.go:79.2,86.12 6 1
+github.com/hamdiBouhani/my-playground-project/server/http.go:89.34,92.2 2 1
+github.com/hamdiBouhani/my-playground-project/server/http.go:102.46,104.2 1 1
