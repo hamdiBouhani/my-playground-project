@@ -16,6 +16,7 @@ var rootCmd = &cobra.Command{
 // registerCommands is where all new command should be added
 func registerCommands(logging *config.LoggerClient) {
 	rootCmd.AddCommand(NewRestCmd(logging))
+	rootCmd.AddCommand(NewMigrateCmd())
 }
 
 // Execute adds all child command to the root command and sets flags appropriately.

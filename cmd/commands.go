@@ -23,3 +23,24 @@ func NewRestCmd(logging *config.LoggerClient) *cobra.Command {
 		},
 	}
 }
+
+func NewMigrateCmd() *cobra.Command {
+	return &cobra.Command{
+		Use:   "migrate",
+		Short: "Run db migration",
+		Long:  ``,
+		Run: func(commandServe *cobra.Command, args []string) {
+			m, err := config.NewMigrateCfg()
+			if err != nil {
+				fmt.Fprintln(os.Stderr, err)
+				os.Exit(2)
+			}
+
+			err = m.Migrate()
+			if err != nil {
+				fmt.Fprintln(os.Stderr, err)
+				os.Exit(2)
+			}
+		},
+	}
+}
