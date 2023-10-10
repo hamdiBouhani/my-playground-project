@@ -49,7 +49,11 @@ func (mg *MigrateCfg) Migrate() error {
 		return err
 	}
 
-	m.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	err = m.Up() // or m.Step(2) if you want to explicitly set the number of migrations to run
+	if err != nil {
+		fmt.Printf("Up: %v\n", err)
+		return err
+	}
 
 	return nil
 }
