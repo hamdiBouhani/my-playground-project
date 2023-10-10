@@ -1,12 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/hamdiBouhani/my-playground-project/cmd"
+	"github.com/joho/godotenv"
 )
 
 func main() {
-	fmt.Println("Hello, playground")
+
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	cmd.Execute()
 }
