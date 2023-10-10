@@ -1,7 +1,12 @@
 package main
 
-import "github.com/hamdiBouhani/my-playground-project/cmd"
+import (
+	"fmt"
+
+	"github.com/hamdiBouhani/my-playground-project/cmd"
+)
 
 func main() {
+	fmt.Println("Hello, playground")
 	cmd.Execute()
 }
