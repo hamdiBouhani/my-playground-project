@@ -2,23 +2,23 @@ package taskes
 
 import "time"
 
-type Task struct {
-	Job        func() error
+type Job struct {
+	JobFunc    func() error
 	Duration   time.Duration
 	CreataedAt time.Time
 	LastRun    *time.Time
 }
 
-func NewTask(job func() error, duration time.Duration) *Task {
-	return &Task{
-		Job:        job,
+func NewTask(job func() error, duration time.Duration) *Job {
+	return &Job{
+		JobFunc:    job,
 		Duration:   duration,
 		CreataedAt: time.Now(),
 	}
 }
 
 type Tasks struct {
-	Jobs []*Task
+	Jobs []*Job
 }
 
 func New() *Tasks {
@@ -32,12 +32,12 @@ func (t *Tasks) Add(job func() error, duration time.Duration) {
 func (t *Tasks) Run() error {
 	for _, job := range t.Jobs {
 		j := job
-		go func(job *Task) {
+		go func(job *Job) {
 			ticker := time.NewTicker(job.Duration)
 			for range ticker.C {
 				now := time.Now()
 				j.LastRun = &now
-				err := job.Job()
+				err := job.JobFunc()
 				if err != nil {
 					return
 				}
