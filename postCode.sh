@@ -28,4 +28,6 @@ git add .
 
 git commit -m "${message}"
 
+git status
+
 echo "Hamdi-Bouhani" | git push
