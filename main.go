@@ -5,9 +5,11 @@ import (
 
 	"github.com/hamdiBouhani/my-playground-project/cmd"
 	"github.com/joho/godotenv"
+	"github.com/pkg/profile"
 )
 
 func main() {
+	defer profile.Start().Stop()
 
 	err := godotenv.Load()
 	if err != nil {
