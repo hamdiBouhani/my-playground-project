@@ -1,4 +1,4 @@
-package services
+package rate_limiter
 
 import (
 	"time"
