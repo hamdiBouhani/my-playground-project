@@ -40,3 +40,10 @@ the project is a playground for testing and learning new technologies and framew
     ├── build-errors.log
     └── main
 ```
+
+
+---
+
+### repo to check and play with:
+
+* [AlphaGolang](https://github.com/SentineLabs/AlphaGolang).
