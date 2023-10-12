@@ -14,3 +14,5 @@ createdb:
 	docker exec -it postgis createdb --username=postgres --owner=postgres playground
 startdb:
 	docker start postgis
+ping:
+	./curl_ping.sh
