@@ -26,8 +26,8 @@ git status
 
 git add .
 
-git commit -m "${message}"
-
 git status
+
+git commit -m "${message}"
 
 echo "Hamdi-Bouhani" | git push
